@@ -1,7 +1,10 @@
 class GameEngine {
-    fun displayBoard(board: Board) {
-        for (row in board.board) {
-            for (piece in row) {
+    fun displayBoard(currBoard: Board) {
+        val board = currBoard.board;
+        println("  a b c d e f g h")
+        for (i in board.indices) {
+            print("${8 - i} ")
+            for (piece in board[i]) {
                 print(
                     when (piece.color) {
                         ColorType.WHITE -> when (piece.type) {
@@ -26,8 +29,9 @@ class GameEngine {
                     }
                 )
             }
-            println()
+            println(" ${8 - i}")
         }
+        println("  a b c d e f g h")
     }
 
     fun getInput(): Triple<PieceType, ColorType, Pair<Int, Int>> {
