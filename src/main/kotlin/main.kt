@@ -1,8 +1,7 @@
 fun main() {
-    val board = Board()
     val gameEngine = GameEngine()
 
-    gameEngine.displayBoard(board)
+    gameEngine.start()
 
     while (true) {
         val input = gameEngine.getInput()
