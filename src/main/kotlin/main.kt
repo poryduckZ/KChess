@@ -3,4 +3,9 @@ fun main() {
     val gameEngine = GameEngine()
 
     gameEngine.displayBoard(board)
+
+    while (true) {
+        val input = gameEngine.getInput()
+        println(input)
+    }
 }
